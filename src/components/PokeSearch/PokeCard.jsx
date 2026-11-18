@@ -15,7 +15,7 @@ function PokeCard({ pokemon, rmData }) {
         <Badge bg="secondary">Pokédex #{pokemon.id}</Badge>
         <Card.Title className="text-capitalize">{pokemon.name}</Card.Title>
         <Stack direction="horizontal" gap={2} className="flex-wrap">
-          <BsButton variant={shiny ? 'secondary' : 'warning'} onClick={() => setShiny((shiny) => !shiny)}>{shiny ? 'Make Normal' : 'Shine'}</BsButton>
+          <BsButton variant={shiny ? 'secondary' : 'warning'} onClick={() => setShiny((shiny) => !shiny)}>{shiny ? 'Make Normal' : 'Make Shiny'}</BsButton>
           <BsButton variant="danger" onClick={() => rmData(pokemon.id)}>Remove</BsButton>
           <BsButton as={Link} to={`/pokemon/${pokemon.id}`} variant="outline-primary">Details</BsButton>
         </Stack>
